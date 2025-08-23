@@ -5,7 +5,7 @@ function FootballPostGenerator() {
   const [teamLogo, setTeamLogo] = useState(null);
   const [opponentLogo, setOpponentLogo] = useState(null);
   const [date, setDate] = useState("24 September 2025 Sunday");
-  const [time, setTime] = useState("4:30 PM");
+  const [time, setTime] = useState("4:00 PM");
   const [stadium, setStadium] = useState("Dolphin Ground,  Lahore");
   const [bgColor, setBgColor] = useState("#1e3a8a"); // default blue
   const [textColor, setTextColor] = useState("#ffffff"); // default white
@@ -105,12 +105,46 @@ function FootballPostGenerator() {
             )}
           </div>
 
-          {/* Match Info Banner */}
-          <div className="mt-8 w-full text-center bg-black/60 rounded-xl py-4 px-6 backdrop-blur-md shadow-lg">
-            <p className="text-lg sm:text-xl font-semibold">{date}</p>
-            <p className="text-base sm:text-lg">{time}</p>
-            <p className="text-base sm:text-lg mt-2">{stadium}</p>
-          </div>
+<div
+  className="mt-8 w-full text-center rounded-xl py-6 px-8 backdrop-blur-md relative overflow-hidden"
+  style={{
+    backgroundColor: "rgba(0,0,0,0.6)",
+    boxShadow: `0 0 20px ${textColor}, 0 0 40px ${textColor}`,
+    border: `2px solid ${textColor}`,
+  }}
+>
+  {/* Animated Neon Border */}
+  <div
+    className="absolute inset-0 rounded-xl border-2 animate-pulse"
+    style={{
+      borderColor: textColor,
+      boxShadow: `0 0 15px ${textColor}, 0 0 30px ${textColor}`,
+    }}
+  ></div>
+
+  {/* Match Info Content */}
+  <div className="relative z-10">
+    <p
+      className="text-lg sm:text-2xl font-bold tracking-wide"
+      style={{ textShadow: `0 0 10px ${textColor}` }}
+    >
+      {date}
+    </p>
+    <p
+      className="text-base sm:text-xl mt-1"
+      style={{ textShadow: `0 0 8px ${textColor}` }}
+    >
+      {time}
+    </p>
+    <p
+      className="text-base sm:text-lg mt-2 font-medium"
+      style={{ textShadow: `0 0 6px ${textColor}` }}
+    >
+      {stadium}
+    </p>
+  </div>
+</div>
+
         </div>
       </div>
 
