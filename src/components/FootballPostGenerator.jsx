@@ -88,9 +88,9 @@ function FootballPostGenerator() {
           {/* Logos with circles */}
           <div className="flex items-center justify-between w-full">
             {teamLogo && (
-              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-yellow-400 flex items-center justify-center bg-white shadow-lg">
+              <div className="w-24 h-24 sm:w-44 sm:h-44 rounded-full border-4 border-yellow-400 flex items-center justify-center bg-white shadow-lg">
                 <img src={teamLogo} alt="Team Logo"
-                  className="w-20 h-20 sm:w-28 sm:h-28 object-contain rounded-full" />
+                  className="w-20 h-20 sm:w-40 sm:h-40 object-contain rounded-full" />
               </div>
             )}
             {/* VS Badge */}
@@ -98,13 +98,14 @@ function FootballPostGenerator() {
               VS
             </div>
             {opponentLogo && (
-              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-yellow-400 flex items-center justify-center bg-white shadow-lg">
+              <div className="w-24 h-24 sm:w-44 sm:h-44  rounded-full border-4 border-yellow-400 flex items-center justify-center bg-white shadow-lg">
                 <img src={opponentLogo} alt="Opponent Logo"
-                  className="w-20 h-20 sm:w-28 sm:h-28 object-contain rounded-full" />
+                  className="w-20 h-20 sm:w-40 sm:h-40 object-contain rounded-full" />
               </div>
             )}
           </div>
 
+       
 <div
   className="mt-8 w-full text-center rounded-xl py-6 px-8 backdrop-blur-md relative overflow-hidden"
   style={{
